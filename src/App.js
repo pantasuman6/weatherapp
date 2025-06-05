@@ -23,6 +23,12 @@ function App() {
     }
   };
 
+
+  function clear(){
+
+    setCity("")
+  }
+
   const handleSearch = () => {
     if (city !== '') {
       fetchWeather();
@@ -56,8 +62,12 @@ function App() {
           <p><b>Humidity: {weather.main.humidity}%</b></p>
           <p><b>Wind speed: {weather.wind.speed} m/s</b></p>
         </div>
+        
       )}
+      <><button onClick={clear}>Clear</button></>
+      
     </div>
+    
   );
 }
 
